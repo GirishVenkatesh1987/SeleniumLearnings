@@ -1,0 +1,28 @@
+package com.selenenium.apis;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class DeadLinksTest {
+	
+	public static void main(String[] args) {
+		WebDriver dri = new FirefoxDriver();
+		List<WebElement> links = new ArrayList<WebElement>();
+		links = dri.findElements(By.tagName("a"));
+		links.addAll(dri.findElements(By.tagName("img")));  //good example of having combining different tag elements in list
+		List<WebElement> hyperlinks = new ArrayList<WebElement>();
+		for (WebElement ele : links) {
+			if(ele.getAttribute("href") != null) {
+				hyperlinks.add(ele);
+				
+			}
+		}
+		
+	}
+
+}

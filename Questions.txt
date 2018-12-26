@@ -1,0 +1,10 @@
+1. Why webdriver has to extend SearchContext interface ?
+2. Use of ImeHandler
+3. fullscreen v/s maximize api
+4. Learn the diff type of proxy settings available in firefox, chrome, ie
+5. xpath, css
+6. Diff certificates meaning..ssl, https, http.ftp etc, root CA, Issuing CA...
+7. CapabilityType. ->all properties and its usage
+8. Extract sel jar and go thru apis 
+9. Sel 3 : different drivers fir firefox chrome ie safari : try some examples
+10. Bootstrap drop down : check naveens video

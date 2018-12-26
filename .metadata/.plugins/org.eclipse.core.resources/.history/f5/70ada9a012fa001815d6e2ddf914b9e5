@@ -1,0 +1,13 @@
+package com.selenenium.apis;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SwicthToTest {
+
+	public static void main(String[] args) {
+		WebDriver dri = new FirefoxDriver();
+		dri.switchTo().window("windowid");
+		dri.switchTo().alert();
+	}
+}

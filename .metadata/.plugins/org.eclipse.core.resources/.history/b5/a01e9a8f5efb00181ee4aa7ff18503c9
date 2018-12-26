@@ -1,0 +1,11 @@
+package com.selenenium.apis;
+
+public class AleretTest {
+	
+	public static void main(String[] args) {
+		WebDriverWait wait = new WebDriverWait(driver, 10);      
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
+		alert.authenticateUsing(new UserAndPassword(username, password));
+	}
+
+}

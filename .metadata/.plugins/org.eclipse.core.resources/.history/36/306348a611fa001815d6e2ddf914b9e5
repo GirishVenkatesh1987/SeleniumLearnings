@@ -1,0 +1,21 @@
+package com.selenenium.apis;
+
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.selenium.listeners.WebdriverEventListnerTest;
+
+public class ScreenshotTest {
+	
+	public static void main(String[] args) {
+		WebDriver dri = new FirefoxDriver();
+		TakesScreenshot screenshot = (TakesScreenshot) dri;  
+		File file = screenshot.getScreenshotAs(OutputType.FILE);
+		
+	}
+
+}

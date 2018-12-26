@@ -1,0 +1,18 @@
+package com.selenenium.apis;
+
+import org.openqa.selenium.Proxy;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class ProxyTest {
+	
+	public static void main(String[] args) {
+		Proxy p =new Proxy();
+		p.setHttpProxy("localhost:7777");
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability(CapabilityType.PROXY, p);
+		
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.selenenium.apis;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class DeadLinksTest {
+	
+	public static void main(String[] args) throws MalformedURLException {
+		WebDriver dri = new FirefoxDriver();
+		List<WebElement> links = new ArrayList<WebElement>();
+		links = dri.findElements(By.tagName("a"));
+		links.addAll(dri.findElements(By.tagName("img")));  //good example of having combining different tag elements in list
+		List<URL> hyperlinks = new ArrayList<URL>();
+		for (WebElement ele : links) {
+			if(ele.getAttribute("href") != null) {
+				hyperlinks.add(new URL(ele.getAttribute("href")));				
+			}
+		}
+		
+	}
+
+}
